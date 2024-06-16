@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #161623;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.circle {
+    margin-top: 300px;
+    margin-left: 300px;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #FF9800;
+    border-radius: 100%;
+}
+
+#form-reg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    width: 380px;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.1px);
+    -webkit-backdrop-filter: blur(14.1px);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+}
+
+#form-reg,#form-login h1 {
+    color: #fff;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input{
+    width: 230px;
+    height: 18px;
+    /* border-top: none; */
+    /* border-left: none; */
+    /* border-right: none; */
+    outline: none;
+    /* color: #000; */
+    padding: 10px;
+}
+
+#file{
+    position: relative;
+    right: 10px;
+   border: none; 
+}
+.inp-parent {
+    /* background-color: #FF9800; */
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+::placeholder {
+    color: #000;
+  }
+input[type=file] {
+    height: 50px;
+}
+
+.btn_parent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#reg_btn{
+    height: 35px;
+    width: 100px;
+    position: relative;
+    top: 10px;
+}
+#log_btn{
+    height: 35px;
+    width: 100px;
+    position: relative;
+    top: 10px;   
+}
+
+/* login */
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    width: 380px;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.1px);
+    -webkit-backdrop-filter: blur(14.1px);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+
+    display: none;
+}
+#inp-parent-log{
+    margin-top: 10px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#log_btn1{
+    height: 35px;
+    width: 100px;
+    position: relative;
+    top: 10px;   
+}
