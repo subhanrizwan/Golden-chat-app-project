@@ -39,7 +39,6 @@ const storage = getStorage();
 const db = getFirestore(app);
 
 let reg = document.getElementById('reg_btn')
-
 reg.addEventListener('click', () => {
 
   let name = document.getElementById('name')
@@ -47,14 +46,13 @@ reg.addEventListener('click', () => {
   let pass = document.getElementById('pass-reg')
   let img = document.getElementById('file')
 
-
   createUserWithEmailAndPassword(auth, email.value, pass.value)
     .then(async (userCredential) => {
       const user = userCredential.user;
       console.log("User registered --->", user.email);
+      swal("You have Registered", "congrats!", "success");
       console.log(user.uid);
 
-      
       try {
         await setDoc(doc(db, "users", user.uid), {
           name: name.value,
@@ -107,7 +105,6 @@ reg.addEventListener('click', () => {
         }
       );
 
-      // 
       formreg.style.display = 'none';
       formlog.style.display = 'block';
       formlog.style.display = 'flex';
@@ -121,8 +118,9 @@ reg.addEventListener('click', () => {
 
 
 
-// Login-start
 
+
+// Login-start
 let formreg = document.getElementById('form-reg');
 let formlog = document.getElementById('form-login');
 var log = document.getElementById('log_btn');
