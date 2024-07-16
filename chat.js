@@ -34,7 +34,7 @@ if (docSnap.exists()) {
   let email1 = document.getElementById('curUser_email')
 
   name1.innerHTML =userData.name
-  email1.innerHTML = userData.email
+  // email1.innerHTML = userData.email
   
   if(userData.image){
     img.src = userData.image

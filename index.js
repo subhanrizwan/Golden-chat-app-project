@@ -45,13 +45,27 @@ reg.addEventListener('click', () => {
   let email = document.getElementById('email-reg')
   let pass = document.getElementById('pass-reg')
   let img = document.getElementById('file')
+  let spinner = document.getElementById('spin')
 
+ if (name.value) {
+    if (email.value) {
+      if (pass.value) {
+      } else { swal("please enter passwprd") }
+    } else { swal("please enter your email") }
+  } else { swal("please enter your name") }
+  
+
+
+  spinner.style.display = "block"
+  reg.disabled = true
   createUserWithEmailAndPassword(auth, email.value, pass.value)
     .then(async (userCredential) => {
       const user = userCredential.user;
       console.log("User registered --->", user.email);
+      spinner.style.display = "none"
+       reg.disabled = false 
+
       swal("You have Registered", "congrats!", "success");
-      console.log(user.uid);
 
       try {
         await setDoc(doc(db, "users", user.uid), {
@@ -62,6 +76,9 @@ reg.addEventListener('click', () => {
         });
         console.log("Document written with ID: ", user.uid);
       } catch (e) {
+        spinner.style.display = "none"
+       reg.disabled = false
+       swal("you can't Register for same errors", "try again!", "error");
         console.error("Error adding document: ", e);
       }
 
@@ -104,10 +121,11 @@ reg.addEventListener('click', () => {
           });
         }
       );
-
-      formreg.style.display = 'none';
-      formlog.style.display = 'block';
-      formlog.style.display = 'flex';
+      setTimeout(()=>{
+        formreg.style.display = 'none';
+        formlog.style.display = 'block';
+        formlog.style.display = 'flex';
+      },2000)
 
     })
     .catch((error) => {
@@ -127,8 +145,6 @@ var log = document.getElementById('log_btn');
 
 log.addEventListener('click', () => {
 
-  //  swal("Registered", "you have registered", "success");
-
   formreg.style.display = 'none'
   formlog.style.display = 'block'
   formlog.style.display = 'flex'
@@ -141,6 +157,15 @@ var log1 = document.getElementById('log_btn1');
 log1.addEventListener('click', () => {
   let email_log = document.getElementById('email-log');
   let pass_log = document.getElementById('pass-log');
+  let spin2 = document.getElementById('spin2')
+
+    if (email_log.value) {
+      if (pass_log.value) {
+    } else { swal("please enter your password") }
+  } else { swal("please enter your email") }
+
+  spin2.style.display = "block"
+  reg.disabled = true
 
   signInWithEmailAndPassword(auth, email_log.value, pass_log.value)
   .then((userCredential) => {
@@ -150,11 +175,21 @@ log1.addEventListener('click', () => {
     email_log.value =""
     pass_log.value =""
 
+    setTimeout(()=>{
+      spin2.style.display = "none"
+      reg.disabled = false
+     
+    },2000)
+
+
     window.location = 'chat.html'
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    swal("you can't login for same errors", "try again!", "error");
+    spin2.style.display = "none"
+    reg.disabled = false
   });
 })
 

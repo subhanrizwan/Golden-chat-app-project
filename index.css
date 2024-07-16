@@ -11,15 +11,15 @@ body {
     overflow-y: hidden;
 }
 
-.circle {
-    margin-top: 300px;
+/* .circle {
+    margin-top: 550px;
     margin-left: 300px;
     position: absolute;
     width: 500px;
     height: 500px;
     background: #FF9800;
     border-radius: 100%;
-}
+} */
 
 #form-reg {
     display: flex;
@@ -30,7 +30,8 @@ body {
 
     background: rgba(255, 255, 255, 0.25);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 10px 10px 5px 12px white inset; */
+    box-shadow: 0 4px 30px rgba(246, 246, 246, 0.1);
     backdrop-filter: blur(14.1px);
     -webkit-backdrop-filter: blur(14.1px);
     border: 1px solid rgba(255, 255, 255, 0.36);
@@ -81,10 +82,18 @@ input[type=file] {
     justify-content: space-between;
 }
 #reg_btn{
+    border: none;
+    outline: none;
     height: 35px;
     width: 100px;
     position: relative;
     top: 10px;
+}
+#reg_btn:hover{
+    background-color: #161623;
+    color: white;
+    border-radius: 20px;
+    transition-duration: 0.3s;
 }
 #log_btn{
     height: 35px;
@@ -92,9 +101,16 @@ input[type=file] {
     position: relative;
     top: 10px;   
 }
+#log_btn:hover{
+    border: none;
+    outline: none;
+    background-color: #161623;
+    color: white;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+}
 
 /* login */
-
 #form-login {
     display: flex;
     flex-direction: column;
@@ -104,7 +120,7 @@ input[type=file] {
 
     background: rgba(255, 255, 255, 0.25);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(163, 126, 126, 0.1);
     backdrop-filter: blur(14.1px);
     -webkit-backdrop-filter: blur(14.1px);
     border: 1px solid rgba(255, 255, 255, 0.36);
@@ -124,4 +140,51 @@ input[type=file] {
     width: 100px;
     position: relative;
     top: 10px;   
+}
+#log_btn1:hover{
+
+    border: none;
+    outline: none;
+    background-color: #161623;
+    color: white;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+}
+
+.loader{
+    display: none;
+    position: relative;
+    right: 75px;
+    top: 12px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border :3px solid gray;  
+    border-top-color:#161623 ;
+    animation: rotate 2s infinite;
+}
+
+@keyframes rotate{
+100%{
+    rotate: 360deg;
+}
+}
+
+.loader2{
+    display: none;
+    position: relative;
+    right: 188px;
+    top: 12px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border :3px solid gray;  
+    border-top-color:#161623 ;
+    animation: rotate2 2s infinite;
+}
+
+@keyframes rotate2{
+100%{
+    rotate: 360deg;
+}
 }

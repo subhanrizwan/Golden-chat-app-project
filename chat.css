@@ -11,7 +11,7 @@ body {
     overflow-y: hidden;
 }
 
-.circle {
+/* .circle {
     margin-top: 300px;
     margin-left: 300px;
     position: absolute;
@@ -19,12 +19,10 @@ body {
     height: 500px;
     background: #FF9800;
     border-radius: 100%;
-}
+} */
 
 .chat-parent {
-    /* color: #fff; */
-/* */
-    width: 50%;
+    width: 690px;
     height: 500px;
     display: flex;
     justify-content: space-between;
@@ -34,7 +32,8 @@ body {
     -webkit-backdrop-filter: blur(14.1px);
     border: 1px solid rgba(255, 255, 255, 0.36);
 }
-.card{
+#card1{
+    width: 11rem;
     color: #fff;
     padding-top: 10px;
     padding-left: 10px;
@@ -44,6 +43,17 @@ body {
     border-radius: 0px;
     line-height: 10px;
 
+}
+#card-user{
+    width: 30rem;
+    color: #fff;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    border-radius: 0px;
+    line-height: 10px;
 }
 
 #profile {
@@ -59,7 +69,6 @@ body {
 }
 .list-group a{
     color: #fff;
-
     background-color: transparent;
     border: none;
     border-bottom: 1px solid gray;
@@ -92,18 +101,14 @@ body {
     height: 100%;
     display: flex;
     justify-content: end    ;  
-      /* background-color: #161623; */
 }
 
 /* chat */
 .chat-section {
-  
-    /* display: flex; */
-    /* flex-direction: column; */
     width:95%;
     height: 93%;
-    /* background-color: #FF9800; */
     border-left:1px solid gray;
+
 }
 .col1{
     margin-top: 10px;
@@ -111,9 +116,6 @@ body {
     overflow-x: hidden;
  width: 100%;
  height: 80%;
- /* display: flex; */
- /* flex-direction: column; */
- /* justify-content: space-between; */
  color: #fff;
 }
 .msg-row{
@@ -134,12 +136,9 @@ body {
     font-weight: 400;
     font-size: 15px;
 }
-/* .col2{ */
-    /* flex: 1; */
-/* } */
+
 .msg-row2{
     justify-content: flex-end;
-    /* margin-bottom: -20px; */
 }
 .msg-img{
     width: 40px;
@@ -148,7 +147,6 @@ body {
     margin: 0 10px;
 }
 .sent-msg{
-    /* position:fixed; */
     display: flex;
     align-items: center;
 justify-content: space-around;
@@ -189,27 +187,17 @@ color: #161623;
   ::-webkit-scrollbar-track {
     /* background: #f1f1f1;  */
         background: rgba(255, 255, 255, 0.3);
-
-  }
-   
+  }  
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #888; 
   }
-  
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
   #card-user{
     display: flex;
-    /* color: #fff; */
-    /* padding-top: 10px; */
-    /* padding-left: 10px; */
-    /* background-color: transparent; */
-    /* border: none; */
-    /* border-bottom: 1px solid gray; */
-    /* border-radius: 0px; */
     height: 60px;
     justify-content: center;
   }
@@ -220,4 +208,36 @@ color: #161623;
     background-size: cover;
     background-position: center;
   }
-/* chat
+
+  @media only screen and (max-width: 320px) {
+    .chat-parent {
+        position: relative;
+        top:140px;
+        left: 70px;
+        width: 450px;
+    }
+    .section1 {
+        width: 5rem;
+        height: 100%;
+    }
+    .section2 {
+        width: 30rem;
+        height: 100%;
+    }
+    .col1{
+     width: 349px;
+    }
+    .list-group a{
+        width: 99px;
+    }
+    #card1{
+        width: 6.2rem;
+    }
+    #card-user{
+        width: 21rem;
+    }
+    .sent-msg{
+        width: 75%;
+    }
+}
+  
