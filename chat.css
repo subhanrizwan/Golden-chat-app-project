@@ -164,19 +164,20 @@ justify-content: space-around;
     padding: 10px;
     width: 85%;
     height: 40px;
-    color: #161623;
+    color: #ffff;
     /* font-size: 14px; */
     background-color: transparent;
 /* border-radius: 100px; */
 }
 ::placeholder{
-    color: #161623;
+    color: #ffff;
 }
 #sent-icon{
 cursor: pointer;
+color: #fff;
 }
 #sent-icon:hover{
-color: #161623;
+color: gray;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -212,32 +213,58 @@ color: #161623;
   @media only screen and (max-width: 320px) {
     .chat-parent {
         position: relative;
-        top:140px;
-        left: 70px;
-        width: 450px;
+        top: 100px;
+        left: 66px;
+        width: 440px;
     }
     .section1 {
-        width: 5rem;
+        /* background-color: aquamarine; */
+        width: 4rem;
         height: 100%;
     }
     .section2 {
-        width: 30rem;
+        /* background-color: #888; */
+        width: 15rem;
         height: 100%;
     }
     .col1{
-     width: 349px;
-    }
+        width: 249px;    }
     .list-group a{
-        width: 99px;
+        width: 66px;
     }
     #card1{
-        width: 6.2rem;
+        width: 4.1rem;
     }
     #card-user{
-        width: 21rem;
+        width: 15.2rem;
     }
     .sent-msg{
-        width: 75%;
+        width: 76%;
+    }
+    .chat-section{
+        width: 100%;
+        height: 93%;
+        border-left: 1px solid gray;
+        position: relative;
+        right: 11px
+    }
+    .msg-row{
+        display: flex;
+        margin: 6px;
+        align-items: center;
+    }
+    .msg-text{
+        background: rgba(255, 255, 255, 0.3);
+        padding: 1px 8px;
+        border-radius: 8px;
+        flex-basis:50%;
+        font-weight: 300;
+        
+    }
+    .msg-text p{
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 12px;
     }
 }
   
